@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
-
 const Watched = () => {
   const [watched, setWatched] = useState([]);
-
   useEffect(() => {
     const storedWatched = JSON.parse(localStorage.getItem("watched")) || [];
     const uniqueMovies = Array.from(new Map(storedWatched.map(movie => [movie.imdbID, movie])).values());

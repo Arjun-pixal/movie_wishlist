@@ -16,7 +16,6 @@ const Watched = () => {
     setWatched(updatedWatched);
     localStorage.setItem("watched", JSON.stringify(updatedWatched));
   };
-
   return (
     <div className="watched-container">
       <h2>Watched Movies</h2>

@@ -7,8 +7,6 @@ A fully responsive and animated movie watchlist app built with React and Vite. F
 - 🔍 Search movies via the OMDb API
 - 📌 Add movies to the watchlist
 - ✔ Mark movies as watched
-- ▶ Play movies directly
-- 💾 Stores data in localStorage
 - 🎨 Fully responsive & modern UI
 
 ## 🛠 Setup Instructions

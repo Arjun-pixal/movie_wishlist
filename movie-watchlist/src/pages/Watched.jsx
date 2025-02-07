@@ -7,10 +7,8 @@ const Watched = () => {
   useEffect(() => {
     const storedWatched = JSON.parse(localStorage.getItem("watched")) || [];
     const uniqueMovies = Array.from(new Map(storedWatched.map(movie => [movie.imdbID, movie])).values());
-
     setWatched(uniqueMovies);
   }, []);
-
   const removeFromWatched = (movieId) => {
     const updatedWatched = watched.filter((movie) => movie.imdbID !== movieId);
     setWatched(updatedWatched);
@@ -35,5 +33,4 @@ const Watched = () => {
     </div>
   );
 };
-
 export default Watched;

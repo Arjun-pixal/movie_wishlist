@@ -26,10 +26,10 @@ const Watchlist = () => {
       {watchlist.length === 0 ? <p>No movies in watchlist.</p> : (
         <div className="watchlist-list">
           {watchlist.map((movie) => (
-            <MovieCard 
-              key={movie.imdbID} 
-              movie={movie} 
-              onMarkAsWatched={markAsWatched} 
+            <MovieCard
+              key={movie.imdbID}
+              movie={movie}
+              onMarkAsWatched={markAsWatched}
             />
           ))}
         </div>

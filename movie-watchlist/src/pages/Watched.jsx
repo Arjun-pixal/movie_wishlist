@@ -6,8 +6,6 @@ const Watched = () => {
 
   useEffect(() => {
     const storedWatched = JSON.parse(localStorage.getItem("watched")) || [];
-
-    // Remove duplicate movies based on imdbID
     const uniqueMovies = Array.from(new Map(storedWatched.map(movie => [movie.imdbID, movie])).values());
 
     setWatched(uniqueMovies);

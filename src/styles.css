@@ -1,0 +1,212 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Arial", sans-serif;
+    }
+    
+    body {
+      background-color: #121212;
+      color: white;
+      padding: 20px;
+    }
+    
+    .app-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1f1f1f;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+    
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    
+    .navbar a:hover {
+      background-color: #ff9800;
+    }
+    
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    
+    .search-bar button {
+      padding: 10px 15px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+    
+    .search-bar button:hover {
+      background-color: #e68900;
+    }
+    
+    .movie-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .movie-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+    
+    .movie-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    .movie-card h3 {
+      font-size: 18px;
+      color: #fff;
+      margin: 10px 0;
+    }
+    
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 8px;
+    }
+    
+    .movie-card button {
+      width: 90%;
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      border: none;
+    }
+    
+    .movie-card button:first-of-type {
+      background: #ff9800;
+      color: white;
+    }
+    
+    .movie-card button:first-of-type:hover {
+      background: #e68900;
+    }
+    
+    .movie-card button:nth-of-type(2) {
+      background: #4caf50;
+      color: white;
+    }
+    
+    .movie-card button:nth-of-type(2):hover {
+      background: #388e3c;
+    }
+    
+    .movie-card button:last-of-type {
+      background: #2196f3;
+      color: white;
+    }
+    
+    .movie-card button:last-of-type:hover {
+      background: #1976d2;
+    }
+    
+    .watchlist-container,
+    .watched-container {
+      padding: 20px;
+    }
+    
+    .watchlist-list,
+    .watched-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    @media (max-width: 768px) {
+      .movie-card {
+        width: 100%;
+      }
+    
+      .search-bar input {
+        width: 70%;
+      }
+    
+      .navbar {
+        flex-direction: column;
+      }
+    
+      .navbar a {
+        padding: 10px;
+      }
+    }
+    
+    .delete-button {
+      background-color: red;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .delete-button:hover {
+      background-color: darkred;
+    }
+    
+    .notification {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeInOut 2s ease-in-out;
+    }
+    
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(-10px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-10px); }
+    }
+    
